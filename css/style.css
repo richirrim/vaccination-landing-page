@@ -116,6 +116,30 @@ h3 { font-size: var(--h3-font-size); }
 
 
 /*-----------------------*\
+    $Button
+\*-----------------------*/
+.button {
+    display: inline-block;
+    border-radius: .3em;
+    padding: .6em 1.8em .6em;
+    color: #fff;
+    background-color: var(--color-first);
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: rgba(0,0,0, .1) 0 .3em .3em;
+    transition: all .3s;
+}
+    .button:active { 
+        transform: scale(.96); 
+    }
+    .button:hover {
+        background-color: var(--color-second);
+    }
+
+
+/*-----------------------*\
     $Header
 \*-----------------------*/
 .main-header {
@@ -129,6 +153,9 @@ h3 { font-size: var(--h3-font-size); }
         align-items: center;
         justify-content: space-between;
     }
+    .main-header__block > .main-header__button {
+        display: none;
+    }
     .main-logo { 
         font-size: calc(var(--header-height) / 2);
         color: var(--color-first);
@@ -139,10 +166,6 @@ h3 { font-size: var(--h3-font-size); }
     .icon-menu-toggle:active { 
         transform: scale(.89); 
     }
-    .main-header__button {
-        display: none;
-    }
-
 
 
 /*-----------------------*\
@@ -195,4 +218,7 @@ h3 { font-size: var(--h3-font-size); }
     }
     .show-menu {
         right: 0
+    }
+    .main-nav > .main-header__button {
+        width: 100%;
     }
