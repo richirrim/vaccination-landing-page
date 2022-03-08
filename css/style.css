@@ -1,0 +1,66 @@
+/*-----------------------*\
+    $Variables
+\*-----------------------*/
+:root {
+    /* Color palette */
+    --color-first:;
+    --color-second:;
+    --color-accent:;
+    --color-bg:;
+    --color-text: #263238;
+
+    /* Typography */
+    --font-title: '', sans-serif;
+    --font-content: '', sans-serif;
+    --h1-font-size: 2rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.2rem;
+    --body-font-size: 1rem;
+    --small-font-size: .8rem;
+
+    /* Layout */
+    --header-height: 60px;
+    --max-width: 1000px;
+    --gutter: 1em;
+}
+
+
+/*-----------------------*\
+    $Base
+\*-----------------------*/
+*,
+*::after,
+*::before { box-sizing: border-box; }
+body {
+    font-size: var(--body-font-size);
+    font-family: var(--font-content);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+}
+img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+a { 
+    color: var(--color-accent);
+    text-decoration: none; 
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 { 
+    margin-top: 0;
+    font-family: var(--font-title); 
+    text-transform: uppercase;
+}
+p {
+    margin-top: 0;
+    font-family: var(--font-content)
+}
+h1 { font-size: var(--h1-font-size); }
+h2 { font-size: var(--h2-font-size); }
+h3 { font-size: var(--h3-font-size); }
