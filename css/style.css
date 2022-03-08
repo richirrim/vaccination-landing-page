@@ -64,3 +64,51 @@ p {
 h1 { font-size: var(--h1-font-size); }
 h2 { font-size: var(--h2-font-size); }
 h3 { font-size: var(--h3-font-size); }
+
+
+/*-----------------------*\
+    $Layout
+\*-----------------------*/
+.l-container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    max-width: var(--max-width);
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+.l-section {
+    margin-bottom: 6rem;
+}
+.center-block {
+    margin-left: auto;
+    margin-right: auto;
+}
+.center-content { text-align: center; }
+
+
+/*-----------------------*\
+    $Icons
+\*-----------------------*/
+[class*=icon-]::before {
+    --color-black-icon: invert(16%) sepia(17%) saturate(743%) hue-rotate(155deg) brightness(92%) contrast(89%);
+    --width: 1.5em;
+    content: "";
+    display: inline-block;
+    margin-right: .4em;
+    width: var(--width);
+    height: var(--width);
+}
+    [class*=icon-]:hover::before,
+    [class*=icon-]:focus::before {
+        filter: var(--color-black-icon);
+    }
+
+.icon-name::before {
+    content: "";
+    background-image: url("../icons/icon-name.svg");
+    background-repeat: no-repeat;
+    filter: var(--color-black-icon);
+}
