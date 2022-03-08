@@ -136,6 +136,9 @@ h3 { font-size: var(--h3-font-size); }
     .icon-menu-toggle {
         cursor: pointer;
     }
+    .icon-menu-toggle:active { 
+        transform: scale(.89); 
+    }
     .main-header__button {
         display: none;
     }
@@ -156,7 +159,7 @@ h3 { font-size: var(--h3-font-size); }
     padding: var(--padding);
     background-color: var(--color-text);
     width: var(--vw);
-    transition: left .3s;
+    transition: right .3s;
 }
     .menu {
         margin-top: 0;
@@ -189,4 +192,7 @@ h3 { font-size: var(--h3-font-size); }
         background-color: var(--color-second);
         height: .2em;
         width: 50%;
+    }
+    .show-menu {
+        right: 0
     }
