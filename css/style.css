@@ -3,15 +3,15 @@
 \*-----------------------*/
 :root {
     /* Color palette */
-    --color-first:;
-    --color-second:;
-    --color-accent:;
-    --color-bg:;
+    --color-first: #2196f3;
+    --color-second: #1976d2;
+    --color-amber: #ffc107;
+    --color-bg: #e3f2fd;
     --color-text: #263238;
 
     /* Typography */
-    --font-title: '', sans-serif;
-    --font-content: '', sans-serif;
+    --font-title: 'Archivo Narrow', sans-serif;
+    --font-content: 'Archivo Narrow', sans-serif;
     --h1-font-size: 2rem;
     --h2-font-size: 1.5rem;
     --h3-font-size: 1.2rem;
@@ -19,7 +19,7 @@
     --small-font-size: .8rem;
 
     /* Layout */
-    --header-height: 60px;
+    --header-height: 80px;
     --max-width: 1000px;
     --gutter: 1em;
 }
@@ -44,7 +44,7 @@ img {
     height: auto;
 }
 a { 
-    color: var(--color-accent);
+    color: var(--color-text);
     text-decoration: none; 
 }
 h1,
@@ -59,7 +59,8 @@ h6 {
 }
 p {
     margin-top: 0;
-    font-family: var(--font-content)
+    font-family: var(+--font-content);
+    font-weight: 500;
 }
 h1 { font-size: var(--h1-font-size); }
 h2 { font-size: var(--h2-font-size); }
@@ -106,9 +107,86 @@ h3 { font-size: var(--h3-font-size); }
         filter: var(--color-black-icon);
     }
 
-.icon-name::before {
+.icon-menu-toggle::before {
     content: "";
-    background-image: url("../icons/icon-name.svg");
+    background-image: url("../icons/icon-menu-toggle.svg");
     background-repeat: no-repeat;
     filter: var(--color-black-icon);
 }
+
+
+/*-----------------------*\
+    $Header
+\*-----------------------*/
+.main-header {
+    position: fixed;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--color-bg);
+}
+    .main-header__block {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    .main-logo { 
+        font-size: calc(var(--header-height) / 2);
+        color: var(--color-first);
+    }
+    .icon-menu-toggle {
+        cursor: pointer;
+    }
+    .main-header__button {
+        display: none;
+    }
+
+
+
+/*-----------------------*\
+    $Nav
+\*-----------------------*/
+.main-nav {
+    --padding: 2em;
+    --vw: 70vw;
+    position: fixed;
+    right: calc(var(--vw) * -1);
+    top: var(--header-height);
+    bottom: 0;
+    padding-left: var(--padding);
+    padding: var(--padding);
+    background-color: var(--color-text);
+    width: var(--vw);
+    transition: left .3s;
+}
+    .menu {
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+    }
+    .menu__item {
+        position: relative;
+        list-style-type: none;
+    }
+    .menu__item {
+        display: block;
+        padding-bottom: 1em;
+        margin-bottom: 1em;
+    }
+    .menu__link {
+        color: var(--color-bg); 
+        transition: all .3s;
+    }
+    .menu__link:hover {
+        color: var(--color-second)
+    }
+    .menu__link:hover::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        border-radius: .3em;
+        background-color: var(--color-second);
+        height: .2em;
+        width: 50%;
+    }
