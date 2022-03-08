@@ -37,28 +37,33 @@
         </div>
     </header>
     <!------------------------- Banner ------------------------>
-    <div>
-        <div>
-            <h1>Fight Virus With Vaccines</h1>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut atque ducimus architecto eligendi reprehenderit vel sunt sapiente veritatis optio eum! Inventore perferendis, minus tempore deserunt a repudiandae voluptatibus corporis nulla!</p>
-            <span>Best protection</span>
-            <span>Selected Vaccines</span>
+    <div class="banner">
+        <div class="banner__container-left">
+            <h1 class="banner__title">Fight Virus With Vaccines</h1>
+            <p class="banner__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut atque ducimus architecto eligendi reprehenderit vel sunt sapiente veritatis optio eum! Inventore perferendis, minus tempore deserunt a repudiandae voluptatibus corporis nulla!</p>
+            <span class="icon-protection  banner__tag">Best protection</span>
+            <span class="icon-star  banner__tag">Selected Vaccines</span>
         </div>
-        <!-- La img se agrega desde css-->
-        <div></div>
-        <!------------------------ Table ------------------------>
-        <div>
-            <span>Schedule your vaccinations</span>
-            <div>
-                <div>
-                    <span>Location</span>
-                    <span>Jakarta Utara</span>
+        <div class="banner__container-right">
+            <img src="./images/banner-image.jpg" alt="Esta es la imagen del banner.">
+        </div>
+        <!------------------------ Vaccination schedule ------------------------>
+        <div class="schedule">
+            <span class="icon-clock  schedule__text">Schedule your vaccinations</span>
+            <div class="card  card-schedule">
+                <div class="card-schedule__item">
+                    <span class="icon-location">Location</span>
+                    <span class="">Jakarta Utara</span>
                 </div>
-                <div>
-                    <span>Vaccine Type</span>
+                <div class="card-schedule__item">
+                    <span clas="icon-date">Date</span>
+                    <span>08 July 2021</span>
+                </div>
+                <div class="card-schedule__item">
+                    <span class="icon-type">Vaccine Type</span>
                     <span>Moderna</span>
                 </div>
-                <div>Submit</div>
+                <div class="button  card-schedule__button">Submit</div>
             </div>
         </div>
     </div>
