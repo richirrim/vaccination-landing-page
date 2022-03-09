@@ -163,7 +163,7 @@ h3 { font-size: var(--h3-font-size); }
 }
 .icon-syringe::before {
     content: "";
-    background-image: url("../icons/icon-location.svg");
+    background-image: url("../icons/icon-syringe.svg");
 }
 
 
