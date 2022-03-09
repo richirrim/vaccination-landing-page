@@ -20,7 +20,9 @@
             <!------------------------- Main Logo -------------------------->
             <a class="main-logo" href="./">Vaccination</a>
             <!------------------------- Icon | Toggle Menu -------------------------->
-            <i class="icon-menu-toggle" id="js-menu-icon"></i>
+            <span class="icon-container  icon-menu-container">
+                <i class="icon-menu-toggle" id="js-menu-icon"></i>
+            </span>
             <!------------------------- Main Navigation -------------------------->
             <nav id="js-menu" class="main-nav">
                 <ul class="menu">
@@ -38,32 +40,43 @@
     </header>
     <!------------------------- Banner ------------------------>
     <div class="banner">
-        <div class="banner__container-left">
-            <h1 class="banner__title">Fight Virus With Vaccines</h1>
-            <p class="banner__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut atque ducimus architecto eligendi reprehenderit vel sunt sapiente veritatis optio eum! Inventore perferendis, minus tempore deserunt a repudiandae voluptatibus corporis nulla!</p>
-            <span class="icon-protection  banner__tag">Best protection</span>
-            <span class="icon-star  banner__tag">Selected Vaccines</span>
-        </div>
         <div class="banner__container-right">
-            <img src="./images/banner-image.jpg" alt="Esta es la imagen del banner.">
+            <!------------------------- Hero image ------------------------>
+            <img class="banner__hero-image" src="./images/banner-image.jpg" alt="Esta es la imagen del banner.">
         </div>
-        <!------------------------ Vaccination schedule ------------------------>
-        <div class="schedule">
-            <span class="icon-clock  schedule__text">Schedule your vaccinations</span>
-            <div class="card  card-schedule">
-                <div class="card-schedule__item">
-                    <span class="icon-location">Location</span>
-                    <span class="">Jakarta Utara</span>
+        <!------------------------- Hero color ------------------------>
+        <div class="banner__hero-color"></div>
+        <div class="banner__content  l-container  center-content">
+            <div class="banner__container-left">
+                <h1 class="banner__title">Fight Virus With Vaccines</h1>
+                <p class="banner__description">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut atque ducimus architecto eligendi reprehenderit vel sunt sapiente veritatis optio eum! Inventore perferendis.</p>
+                <span class="icon-container  banner__tag">
+                    <i class="icon-security"></i>
+                    Best protection
+                </span>
+                <span class="icon-container  banner__tag">
+                    <i class="icon-star"></i>
+                    Selected Vaccines
+                </span>
+            </div>
+            <!------------------------ Vaccination schedule ------------------------>
+            <div class="schedule">
+                <span class="icon-clock  schedule__text">Schedule your vaccinations</span>
+                <div class="card  card-schedule">
+                    <div class="card-schedule__item">
+                        <span class="icon-location">Location</span>
+                        <span class="">Jakarta Utara</span>
+                    </div>
+                    <div class="card-schedule__item">
+                        <span clas="icon-date">Date</span>
+                        <span>08 July 2021</span>
+                    </div>
+                    <div class="card-schedule__item">
+                        <span class="icon-type">Vaccine Type</span>
+                        <span>Moderna</span>
+                    </div>
+                    <div class="button  card-schedule__button">Submit</div>
                 </div>
-                <div class="card-schedule__item">
-                    <span clas="icon-date">Date</span>
-                    <span>08 July 2021</span>
-                </div>
-                <div class="card-schedule__item">
-                    <span class="icon-type">Vaccine Type</span>
-                    <span>Moderna</span>
-                </div>
-                <div class="button  card-schedule__button">Submit</div>
             </div>
         </div>
     </div>
