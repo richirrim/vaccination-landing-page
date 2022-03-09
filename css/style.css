@@ -101,27 +101,30 @@ h3 { font-size: var(--h3-font-size); }
 /*-----------------------*\
     $Icons
 \*-----------------------*/
-.icon-container > [class*=icon-]::before {
-    --color-black-icon: invert(16%) sepia(17%) saturate(743%) hue-rotate(155deg) brightness(92%) contrast(89%);
-    --width: 1.5em;
-    content: "";
-    display: inline-block;
-    border-radius: .2rem;
-    width: var(--width);
-    height: var(--width);
-}
-[class*=icon-],
-[class="icon-container"] {
+.icon-container {
     display: inline-flex;
     align-items: center;
-    background-repeat: no-repeat;
-    margin-right: .5em;
-    padding: .5em;
 }
-.icon-security,
-.icon-star {
-    border-radius: .3rem;
-    background-color: var(--color-amber2);
+    .icon-container > [class^=icon-] {
+        display: flex;
+        align-items: center;
+        border-radius: .3rem;
+        margin-right: .5em;
+        padding: .5em;
+        background-color: var(--color-second2);
+    }
+    .icon-container > [class*=icon-]::before {
+        --width: 1.5em;
+        content: "";
+        display: inline-block;
+        width: var(--width);
+        height: var(--width);
+        filter: var(--color-second-filter);
+    }
+
+.icon-clock::before {
+    content: "";
+    background-image: url("../icons/icon-clock.svg");
 }
 .icon-menu-toggle::before {
     content: "";
@@ -129,13 +132,23 @@ h3 { font-size: var(--h3-font-size); }
 }
 .icon-security::before {
     content: "";
-    background-image: url("../icons/icon-security.svg");
-    filter: var(--color-amber-filter);
+    background-image: url("../icons/icon-security.svg");   
 }
 .icon-star::before {
     content: "";
     background-image: url("../icons/icon-star.svg");
-    filter: var(--color-amber-filter);
+}
+.icon-location::before {
+    content: "";
+    background-image: url("../icons/icon-location.svg");
+}
+.icon-date::before {
+    content: "";
+    background-image: url("../icons/icon-date.svg");
+}
+.icon-syringe::before {
+    content: "";
+    background-image: url("../icons/icon-location.svg");
 }
 
 
@@ -161,6 +174,17 @@ h3 { font-size: var(--h3-font-size); }
     .button:hover {
         background-color: var(--color-second);
     }
+
+
+/*-----------------------*\
+    $Card
+\*-----------------------*/
+.card {
+    background-color: #fff;
+    border-radius: .4rem;
+    padding: 1em;
+    box-shadow: rgba(0,0,0, .1) 0 .6em 1em;
+}
 
 
 /*-----------------------*\
@@ -262,6 +286,9 @@ h3 { font-size: var(--h3-font-size); }
         calc(var(--header-height) * 0 + 3em);
     color: #fff;
 }
+    .banner__container-left {
+        margin-bottom: 4em;
+    }
     .banner__hero-color {
         position: absolute;
         top: 0;
@@ -285,4 +312,34 @@ h3 { font-size: var(--h3-font-size); }
     }
     .banner__tag {
         margin-right: .5em;
+    }
+    .banner__container-left .icon-container > [class^=icon-] {
+        background-color: var(--color-amber2);
+    }
+    .banner__container-left .icon-security::before,
+    .banner__container-left .icon-star::before {
+        filter: var(--color-amber-filter);
+    }
+
+/*-----------------------*\
+    $Schedule
+\*-----------------------*/
+.schedule {
+    width: 100%;
+    color: var(--color-text);
+    text-align: left;
+}
+    .schedule__text {
+        margin-bottom: 1em;
+        color: #fff;
+    }
+    .card-schedule {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--gutter);
+    }
+    .card-schedule__button {
+        padding: 1em 3em;
+        width: 100%;
     }
