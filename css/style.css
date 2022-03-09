@@ -121,6 +121,21 @@ h3 { font-size: var(--h3-font-size); }
         height: var(--width);
         filter: var(--color-second-filter);
     }
+    /* Card component variation */
+    .icon-container > .icon__block {
+        display: flex;
+        flex-direction: column;
+    }
+    .icon__block .icon__text {
+        margin: .3em;
+    }
+    .icon__block .icon__text:first-child {
+        font-size: 1.2em;
+        opacity: .8;
+    }
+    .icon__block .icon__text:last-child {
+        font-size: 1.3em;
+    }
 
 .icon-clock::before {
     content: "";
