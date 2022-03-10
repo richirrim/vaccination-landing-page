@@ -537,9 +537,14 @@ h3 { font-size: var(--h3-font-size); }
     $Card Contact
 \*-----------------------*/
 .card-contact {
+    padding: 1.4em;
     box-shadow: initial;
     transition: all .3s;
 }
+    .card-contact .icon__text:first-child {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
     .card-contact .icon__text:last-child {
         font-size: .9em;
     }
@@ -557,7 +562,6 @@ h3 { font-size: var(--h3-font-size); }
     .card-contact__button {
         width: 100%;
         box-shadow: initial;
-        margin-bottom: var(--gutter);
         color: var(--color-second);
         background-color: var(--color-second2);
     }
