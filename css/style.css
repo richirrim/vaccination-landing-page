@@ -209,7 +209,7 @@ h3 { font-size: var(--h3-font-size); }
     position: fixed;
     width: 100%;
     height: var(--header-height);
-    background-color: var(--color-bg);
+    background-color: #fff;
     z-index: 100;
 }
     .main-header__block {
@@ -222,7 +222,7 @@ h3 { font-size: var(--h3-font-size); }
     }
     .main-logo { 
         font-size: calc(var(--header-height) / 2);
-        color: var(--color-first);
+        color: var(--color-second);
     }
     .icon-menu-toggle {
         cursor: pointer;
