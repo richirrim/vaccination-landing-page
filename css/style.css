@@ -197,6 +197,22 @@ h3 { font-size: var(--h3-font-size); }
     content: "";
     background-image: url("../icons/icon-down-arrow.svg");
 }
+.icon-call::before {
+    content: "";
+    background-image: url("../icons/icon-call.svg");
+}
+.icon-chat::before {
+    content: "";
+    background-image: url("../icons/icon-chat.svg");
+}
+.icon-camera::before {
+    content: "";
+    background-image: url("../icons/icon-camera.svg");
+}
+.icon-message::before {
+    content: "";
+    background-image: url("../icons/icon-message.svg");
+}
 
 
 /*-----------------------*\
@@ -271,6 +287,7 @@ h3 { font-size: var(--h3-font-size); }
     --columns-number: 2;
     --gutter: 1em;
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: var(--gutter);
 }
@@ -508,3 +525,43 @@ h3 { font-size: var(--h3-font-size); }
         margin-bottom: var(--gutter);
         box-shadow: rgba(0,0,0, .1) 0 .6em 1em;
     }
+
+
+/*-----------------------*\
+    $Contact
+\*-----------------------*/
+.contact {}
+    
+
+/*-----------------------*\
+    $Card Contact
+\*-----------------------*/
+.card-contact {
+    box-shadow: initial;
+    transition: all .3s;
+}
+    .card-contact .icon__text:last-child {
+        font-size: .9em;
+    }
+    .card-contact__text {
+        opacity: .6;
+    }
+    .card-contact:hover .button {
+        color: #fff; 
+        background-color: var(--color-second);
+        box-shadow: rgba(0,0,0, .2) 0 .4em .8em;
+    }    
+    .card-contact .icon-container {
+        margin-bottom: var(--gutter);
+    }
+    .card-contact__button {
+        width: 100%;
+        box-shadow: initial;
+        margin-bottom: var(--gutter);
+        color: var(--color-second);
+        background-color: var(--color-second2);
+    }
+    .card-contact:hover {
+        box-shadow: rgba(0,0,0, .1) 0 .3em .6em;
+    }
+    
