@@ -165,6 +165,18 @@ h3 { font-size: var(--h3-font-size); }
     content: "";
     background-image: url("../icons/icon-syringe.svg");
 }
+.icon-virus::before {
+    content: "";
+    background-image: url("../icons/icon-virus.svg");
+}
+.icon-people::before {
+    content: "";
+    background-image: url("../icons/icon-people.svg");
+}
+.icon-immunity::before {
+    content: "";
+    background-image: url("../icons/icon-immunity.svg");
+}
 
 
 /*-----------------------*\
@@ -201,6 +213,20 @@ h3 { font-size: var(--h3-font-size); }
     box-shadow: rgba(0,0,0, .1) 0 .6em 1em;
 }
 
+
+/*-----------------------*\
+    $Grid
+\*-----------------------*/
+.grid {
+    --columns-number: 2;
+    --gutter: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--gutter);
+}
+    .grid__item {
+        flex-basis: calc(100% / var(--columns-number) - var(--gutter));
+    }
 
 /*-----------------------*\
     $Header
@@ -384,4 +410,37 @@ h3 { font-size: var(--h3-font-size); }
     .organizations__image:hover {
         filter: initial;
         opacity: initial;
+    }
+
+
+/*-----------------------*\
+    $Vaccine info
+\*-----------------------*/
+.vaccine-info {}
+    .vaccine-info__title {
+        position: relative;
+        display: flex;
+        align-items: center;
+        width: 100%;
+    }
+    .vaccine-info__title::after {
+        content: '';
+        border-radius: .3em;
+        position: absolute;
+        right: 0;
+        background-color: var(--color-second);
+        opacity: .2;
+        width: 30%;
+        height: .08em;
+    }
+    .vaccine-info__description {}
+    .card-info {
+        box-shadow: initial;
+        transition: all .3s;
+    }
+    .card-info:hover {
+        box-shadow: rgba(0,0,0, .1) 0 .6em 1em;
+    }
+    .card-info [class*="icon-"] {
+        margin-bottom: .4em;
     }
