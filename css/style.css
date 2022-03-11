@@ -357,7 +357,6 @@ h3 { font-size: var(--h3-font-size); }
     }
     .menu__item {
         display: block;
-        padding-bottom: 1em;
         margin-bottom: 1em;
     }
     .menu__link {
@@ -370,6 +369,7 @@ h3 { font-size: var(--h3-font-size); }
     .menu__link:hover::before {
         content: '';
         position: absolute;
+        top: 1.7em;
         bottom: 0;
         border-radius: .3em;
         background-color: var(--color-second);
@@ -621,3 +621,44 @@ h3 { font-size: var(--h3-font-size); }
     .main-footer__text {
         margin-bottom: .5em;
     }
+
+
+@media screen and (min-width: 768px) {
+    .main-header__block {
+        justify-content: initial;
+    }
+    .icon-container > .icon-menu-toggle {
+        display: none;
+    }
+    .main-header__block > .main-header__button {
+        display: initial;
+    }
+    .main-nav {
+        position: initial;
+        margin-left: auto;
+        padding: 0;
+        background-color: transparent;
+        width: initial;
+        transition: right .3s;
+    }
+        .menu {
+            display: flex;
+            flex-direction: initial;
+        }
+        .menu__item {
+            margin-right: 2em;
+            margin-bottom: 0;
+            padding-bottom: 0;
+            font-weight: 600;
+        }
+        .menu__link {
+            color: var(--color-text);
+            opacity: .7;
+        }
+        .menu__link:hover::before {
+            width: 100%;
+        }
+        .main-nav > .main-header__button {
+            display: none;
+        }
+}
