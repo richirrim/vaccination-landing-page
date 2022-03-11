@@ -505,6 +505,9 @@ h3 { font-size: var(--h3-font-size); }
     .card-info [class*="icon-"] {
         margin-bottom: .4em;
     }
+    .vaccine-info .line::after {
+        width: 20%;
+    }
 
 
 /*-----------------------*\
