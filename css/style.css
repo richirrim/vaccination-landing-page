@@ -10,7 +10,7 @@
     --color-text: #263238;
 
     --color-amber2: #fff8e1;
-    --color-second2: #e3f2fd;
+    --color-second2: #bbdefb;
     
     /* Color palette filters*/
     /* App conversos: https://codepen.io/sosuke/pen/Pjoqqp?editors=0010 */
@@ -569,3 +569,39 @@ h3 { font-size: var(--h3-font-size); }
         box-shadow: rgba(0,0,0, .1) 0 .3em .6em;
     }
     
+
+/*-----------------------*\
+    $Footer
+\*-----------------------*/
+.main-footer {
+    padding: 2em 1em;
+    background-color: var(--color-second2);
+    text-align: center;
+}
+    .main-footer > div {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+    }
+    .main-footer__container {
+        width: 40%;
+    }
+    .main-footer__text,
+    .main-footer__description {
+        opacity: .7;
+    }
+    .main-footer .main-logo {
+        display: block;
+        margin-bottom: calc(var(--gutter) - .8em);
+    }
+    .main-footer__sub-section {
+        display: flex;
+        flex-direction: column;
+        align-items: left;
+    }
+    .main-footer__sub-section:not(:last-child) {
+        margin-bottom: var(--gutter);
+    }
+    .main-footer__text {
+        margin-bottom: .5em;
+    }
