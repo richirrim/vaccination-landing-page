@@ -232,7 +232,7 @@ h3 { font-size: var(--h3-font-size); }
         background-color: var(--color-second);
         opacity: .2;
         width: 30%;
-        height: .08em;
+        height: 1.5px;
     }
     .line--left {
         justify-content: flex-end;
