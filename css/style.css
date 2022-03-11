@@ -597,7 +597,7 @@ h3 { font-size: var(--h3-font-size); }
         flex-direction: column;
     }
     .main-footer__container {
-        width: 40%;
+        width: 72%;
     }
     .main-footer__text,
     .main-footer__description {
