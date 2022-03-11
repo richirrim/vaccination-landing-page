@@ -540,6 +540,10 @@ h3 { font-size: var(--h3-font-size); }
     $Contact
 \*-----------------------*/
 .contact {}
+    .contact .grid {
+        --gutter: .5em;
+        --columns-number: 1;
+    }
     
 
 /*-----------------------*\
