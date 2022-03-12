@@ -519,6 +519,18 @@ h3 { font-size: var(--h3-font-size); }
     $Prepations info
 \*-----------------------*/
 .preparations-info {}
+    .preparations-info > div {
+        --margin: 4em;
+    }
+    .preparations-info__container-text > .line::after {
+        display: none;
+    }
+    .preparations-info__container-text .line::after {
+        width: 10%;
+    }
+    .preparations-info__container-right {
+        width: 100%;
+    }
     .preparations-info__image {
         display: none;
     }
@@ -534,15 +546,17 @@ h3 { font-size: var(--h3-font-size); }
     }
     .preparations-info .card {
         box-shadow: initial;
-        margin-bottom: var(--gutter);
         transition: all .3s;
+    }
+    .preparations-info .card:not(:last-child) {
+        margin-bottom: var(--gutter);
     }
     .preparations-info .card:hover {
         box-shadow: initial;
         margin-bottom: var(--gutter);
         box-shadow: rgba(0,0,0, .1) 0 .6em 1em;
     }
-
+    
 
 /*-----------------------*\
     $Contact
@@ -841,8 +855,57 @@ h3 { font-size: var(--h3-font-size); }
     .vaccine-info .grid__item:not(:last-child) {
         margin-right: 1em;
     }
-}
 
+
+    /*-----------------------*\
+        $Prepations info
+    \*-----------------------*/
+    .preparations-info > div {
+        --margin: 4em;
+        display: flex;
+    }
+    .preparations-info__container-text {
+        display: flex;
+    }
+    .preparations-info__container-text > .line {
+        height: 2em;
+        margin-right: var(--margin);
+        width: calc(50% - var(--margin));
+    }
+    .preparations-info__container-text > .line::after {
+        display: block;
+    }
+    .preparations-info__content-text > .line::after {
+        display: none;
+    }
+    .preparations-info__container-text .line::after {
+        width: 80%;
+    }
+    .preparations-info__content-text {
+        width: 50%;
+    }
+    .preparations-info__container-left {
+        display: flex;
+        align-items: flex-end;
+        margin-right: var(--margin);
+        flex-basis: calc(50% - var(--margin));
+    }
+    .preparations-info__container-right {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        flex-basis: 50%;
+    }
+    .preparations-info .card {
+        width: 70%;
+    }
+    .preparations-info__description {
+        width: 70%;
+    }
+    .preparations-info__image {
+        display: block;
+    }
+}
 
 @media screen and (min-width: 1280px) {
     /*-----------------------*\
