@@ -68,7 +68,7 @@ h6 {
 }
 p {
     margin-top: 0;
-    font-family: var(+--font-content);
+    font-family: var(--font-content);
     font-weight: 500;
 }
 h1 { font-size: var(--h1-font-size); }
@@ -496,13 +496,15 @@ h3 { font-size: var(--h3-font-size); }
     $Vaccine info
 \*-----------------------*/
 .vaccine-info {}
-    
     .vaccine-info__description {}
     .card-info {
         box-shadow: initial;
         transition: all .3s;
     }
     .card-info:hover {
+        box-shadow: rgba(0,0,0, .1) 0 .6em 1em;
+    }
+    .card-info:hover .icon-container {
         box-shadow: rgba(0,0,0, .1) 0 .6em 1em;
     }
     .card-info [class*="icon-"] {
@@ -627,6 +629,14 @@ h3 { font-size: var(--h3-font-size); }
 
 @media screen and (min-width: 540px) {
     /*-----------------------*\
+        $Title line
+    \*-----------------------*/
+    .line::after {
+        width: 40%;
+    }
+
+
+    /*-----------------------*\
         $Banner
     \*-----------------------*/
     .banner__container-tags {
@@ -637,6 +647,14 @@ h3 { font-size: var(--h3-font-size); }
 }
 
 @media screen and (min-width: 768px) {
+    /*-----------------------*\
+        $Title line
+    \*-----------------------*/
+    .line:first-child::after {
+        width: 50%;
+    }
+
+
     /*-----------------------*\
         $Header
     \*-----------------------*/
@@ -649,6 +667,7 @@ h3 { font-size: var(--h3-font-size); }
     .main-header__block > .main-header__button {
         display: initial;
     }
+
 
     /*-----------------------*\
         $Nav
@@ -685,9 +704,32 @@ h3 { font-size: var(--h3-font-size); }
             margin-left: auto;
             margin-right: auto;
         }
+
+    /*-----------------------*\
+        $Vaccine info
+    \*-----------------------*/
+    .vaccine-info .icon-container > [class*=icon-]::before {
+        --width: 1.5em;
+    }
+
+
+    /*-----------------------*\
+        $Vaccine info
+    \*-----------------------*/
+    .contact .icon-container > [class*=icon-]::before {
+        --width: 1.5em;
+    }
 }
 
 @media screen and (min-width: 1024px) {
+    /*-----------------------*\
+        $Title line
+    \*-----------------------*/
+    .line::after {
+        width: 60%;
+    }
+
+
     /*-----------------------*\
         $Header
     \*-----------------------*/
@@ -745,6 +787,8 @@ h3 { font-size: var(--h3-font-size); }
         position: static;
         text-align: initial;
     }
+
+
     /*-----------------------*\
         $Schedule
     \*-----------------------*/
@@ -753,7 +797,7 @@ h3 { font-size: var(--h3-font-size); }
         position: absolute;
         bottom: calc(var(--gutter) * 2);
         padding-left: var(--padding);
-        padding-right: calc(var(--padding) * 4);
+        padding-right: var(--padding);
         opacity: var(--opacity);
     }
     .schedule .grid {
@@ -772,5 +816,40 @@ h3 { font-size: var(--h3-font-size); }
     .card-schedule__button {
         width: 9rem;
         margin-left: auto;
+    }
+
+
+    /*-----------------------*\
+        $Organizations
+    \*-----------------------*/
+    .organizations {
+        --gutter: 2em;
+    }
+    .organizations__image {
+        --width: 20%;
+    }
+
+
+    /*-----------------------*\
+        $Vaccine info
+    \*-----------------------*/
+    .vaccine-info .grid {
+        --columns-number: 4;
+        --gutter: 0;
+        flex-wrap: nowrap;
+    }
+    .vaccine-info .grid__item:not(:last-child) {
+        margin-right: 1em;
+    }
+}
+
+
+@media screen and (min-width: 1280px) {
+    /*-----------------------*\
+        $Schedule
+    \*-----------------------*/
+    .schedule {
+        bottom: calc(var(--gutter) * 2);
+        padding-right: calc(var(--padding) * 4);
     }
 }
