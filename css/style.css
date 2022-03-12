@@ -658,6 +658,25 @@ h3 { font-size: var(--h3-font-size); }
         flex-direction: initial;
         justify-content: center;
     }
+
+
+    /*-----------------------*\
+        $Vaccine info
+    \*-----------------------*/
+    .vaccine-info__description {
+       width: 19em;
+    }
+
+
+    /*-----------------------*\
+        $Preparations info
+    \*-----------------------*/
+    .preparations-info__container-text {
+        width: 100%;
+    }
+    .preparations-info__description {
+        width: 20em;
+    }
 }
 
 @media screen and (min-width: 768px) {
