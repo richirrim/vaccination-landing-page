@@ -676,10 +676,14 @@ h3 { font-size: var(--h3-font-size); }
     /*-----------------------*\
         $Preparations info
     \*-----------------------*/
-    .preparations-info__container-text {
+    .preparations-info__container-text,
+    .contact__container-text {
         width: 100%;
     }
     .preparations-info__description {
+        width: 20em;
+    }
+    .contact__description {
         width: 20em;
     }
 }
@@ -765,6 +769,34 @@ h3 { font-size: var(--h3-font-size); }
     .contact .grid {
         --gutter: 1em;
         --columns-number: 2;
+    }
+
+
+    /*-----------------------*\
+        $Footer
+    \*-----------------------*/
+    .main-footer {
+        text-align: initial;
+    }
+    .main-footer > div {
+        flex-direction: row;
+        align-items: center;
+    }
+    .main-footer__container {
+        margin-right: auto;
+        width: 14em;
+    }
+    .main-footer__description {
+        margin-bottom: 0;
+    }
+    .main-footer__sub-section:not(:last-child) {
+        margin-right: calc(var(--gutter) * 4);
+    }
+    .main-footer__sub-section:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .main-footer__text:last-child {
+        margin-bottom: 0;
     }
 }
 
