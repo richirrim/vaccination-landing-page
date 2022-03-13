@@ -233,7 +233,7 @@ h3 { font-size: var(--h3-font-size); }
         right: 0;
         background-color: var(--color-second);
         opacity: .2;
-        width: 30%;
+        width: 0%;
         height: 1.5px;
     }
     .line--left {
@@ -561,11 +561,16 @@ h3 { font-size: var(--h3-font-size); }
 /*-----------------------*\
     $Contact
 \*-----------------------*/
-.contact {}
-    .contact .grid {
-        --gutter: .5em;
-        --columns-number: 1;
-    }
+.contact .grid {
+    --gutter: .5em;
+    --columns-number: 1;
+}
+.contact__image {
+    display: none;
+}
+.contact__container-text > .line::after {
+    display: none;
+}
     
 
 /*-----------------------*\
@@ -752,6 +757,15 @@ h3 { font-size: var(--h3-font-size); }
     .contact .icon-container > [class*=icon-]::before {
         --width: 1.5em;
     }
+
+
+    /*-----------------------*\
+        $Contact
+    \*-----------------------*/
+    .contact .grid {
+        --gutter: 1em;
+        --columns-number: 2;
+    }
 }
 
 @media screen and (min-width: 1024px) {
@@ -877,51 +891,80 @@ h3 { font-size: var(--h3-font-size); }
 
 
     /*-----------------------*\
-        $Prepations info
+        $Prepations y $Contact
     \*-----------------------*/
-    .preparations-info > div {
-        --margin: 4em;
+    .preparations-info > div,
+    .contact > div {
+        --margin: 3em;
         display: flex;
     }
-    .preparations-info__container-text {
+    .contact [class*="__container-text"],
+    .preparations-info [class*="__container-text"] {
         display: flex;
     }
-    .preparations-info__container-text > .line {
+    .contact [class*="__container-text"] > .line,
+    .preparations-info [class*="__container-text"] > .line {
         height: 2em;
         margin-right: var(--margin);
         width: calc(50% - var(--margin));
     }
-    .preparations-info__container-text > .line::after {
-        display: block;
+    .preparations-info [class*="__container-text"] > .line {
+        margin-right: var(--margin);
     }
-    .preparations-info__content-text > .line::after {
-        display: none;
+    .contact [class*="__container-text"] > .line {
+        margin-right: 0;
     }
-    .preparations-info__container-text .line::after {
+    .contact [class*="__container-text"] > .line::after,
+    .preparations-info [class*="__container-text"] > .line::after {
         width: 80%;
     }
-    .preparations-info__content-text {
-        width: 50%;
+    .contact [class*="__container-text"] > .line::after,
+    .preparations-info [class*="__container-text"] > .line::after {
+        display: block;
     }
-    .preparations-info__container-left {
+    .contact [class*="__container-left"],
+    .preparations-info [class*="__container-left"] {
         display: flex;
         align-items: flex-end;
-        margin-right: var(--margin);
         flex-basis: calc(50% - var(--margin));
     }
-    .preparations-info__container-right {
+    .preparations-info [class*="__container-left"] {
+        margin-right: var(--margin);
+    }
+    .contact [class*="__container-left"] {
+        order: 1;
+    }
+    .contact [class*="__container-right"],
+    .preparations-info [class*="__container-right"] {
         display: flex;
         flex-wrap: wrap;
         align-items: center;
         flex-basis: 50%;
     }
+    .contact [class*="__container-right"] {
+        margin-right: var(--margin);
+    }
+    .contact [class*="__content-text"] > .line::after,
+    .preparations-info [class*="__content-text"] > .line::after {
+        display: none;
+    }
+    .contact [class*="__content-text"] {
+        order: -1;
+        margin-right: var(--margin);
+    }
+    .contact [class*="__content-text"],
+    .preparations-info [class*="__content-text"] {
+        width: 50%;
+    }
     .preparations-info .card {
         width: 70%;
     }
-    .preparations-info__description {
+    .preparations-info__description,
+    .contact__description {
         width: 70%;
     }
-    .preparations-info__image {
+    .preparations-info__image,
+    .contact__image {
         display: block;
     }
 }
