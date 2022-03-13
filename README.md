@@ -11,3 +11,4 @@ Los retos que se plantearon en esta nueva práctica son:
 Y como la practica solo nos proporciona la versión Desktop, el reto sería diseñar la versión Móvil basándonos en la versión Desktop.
 
 ## Preview de la landing page | Index.html
+![preview](https://repository-images.githubusercontent.com/467323311/92ac6f54-1b0d-48d7-81bc-13b4714fced5)
